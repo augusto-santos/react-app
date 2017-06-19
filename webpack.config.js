@@ -89,6 +89,7 @@ const config = {
         test: /\.jsx?$/,
         include: [
           path.resolve(process.cwd(), './actions'),
+          path.resolve(process.cwd(), './api'),
           path.resolve(process.cwd(), './components'),
           path.resolve(process.cwd(), './core'),
           path.resolve(process.cwd(), './pages'),
