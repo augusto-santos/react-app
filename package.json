@@ -91,7 +91,7 @@
     "webpack-hot-middleware": "^2.12.2"
   },
   "optionalDependencies": {
-    "react-app": "^1.1.2"
+    "react-ark": "^1.1.2"
   },
   "devDependencies": {
     "history": "^3.0.0",
@@ -135,8 +135,8 @@
     "lint": "eslint app scripts templates/app run.js webpack.config.js",
     "test": "mocha --compilers js:babel-register",
     "test:watch": "mocha --compilers js:babel-register --reporter min --watch",
-    "new": "node ./app/bin/react-app new --test-sdk",
-    "build": "node ./app/bin/react-app build --test-sdk",
-    "start": "node ./app/bin/react-app run --test-sdk"
+    "new": "node ./app/bin/react-ark new --test-sdk",
+    "build": "node ./app/bin/react-ark build --test-sdk",
+    "start": "node ./app/bin/react-ark run --test-sdk"
   }
 }
