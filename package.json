@@ -1,6 +1,6 @@
 {
   "name": "react-ark-tools",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Boilerplate and tooling for JavaScript application development with React",
   "repository": "augusto-santos/react-app",
   "author": "Kriasoft <hello@kriasoft.com> (https://www.kriasoft.com)",
@@ -114,7 +114,15 @@
     "parser": "babel-eslint",
     "extends": "airbnb",
     "rules": {
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ]
     }
   },
   "stylelint": {
