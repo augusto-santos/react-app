@@ -10,38 +10,46 @@
 import 'whatwg-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import App from './core/app'
 
 import store from './core/store';
-import router from './core/router';
-import history from './core/history';
+import Router from './core/routes'
+//import router from './core/router';
+//import history from './core/history';
 
-let routes = require('./routes.json'); // Parsed by using `utils/routes-loader.js`
+//let routes = require('./routes.json'); // Parsed by using `utils/routes-loader.js`
 
 const container = document.getElementById('root');
 
-function renderComponent(component) {
-  ReactDOM.render(<Provider store={store}>{component}</Provider>, container);
-}
+//function renderComponent(component) {
+//  ReactDOM.render(<App store={store}>{component}</App>, container);
+//}
+
+ReactDOM.render(
+  <App store={store}>
+    <Router />
+  </App>,
+  container
+)
 
 // Find and render a web page matching the current URL path,
 // if such page is not found then render an error page (see routes.json, core/router.js)
-function render(location) {
-  router.resolve(routes, location)
-    .then(renderComponent)
-    .catch(error => router.resolve(routes, { ...location, error }).then(renderComponent));
-}
+//function render(location) {
+//  router.resolve(routes, location)
+//    .then(renderComponent)
+//    .catch(error => router.resolve(routes, { ...location, error }).then(renderComponent));
+//}
 
 // Handle client-side navigation by using HTML5 History API
 // For more information visit https://github.com/ReactJSTraining/history/tree/master/docs#readme
-history.listen(render);
-render(history.getCurrentLocation());
+//history.listen(render);
+//render(history.getCurrentLocation());
 
 // Enable Hot Module Replacement (HMR)
-if (module.hot) {
-  module.hot.accept('./routes.json', () => {
+//if (module.hot) {
+//  module.hot.accept('./routes.json', () => {
     // eslint-disable-next-line global-require, import/newline-after-import
-    routes = require('./routes.json');
-    render(history.getCurrentLocation());
-  });
-}
+//    routes = require('./routes.json');
+//    render(history.getCurrentLocation());
+//  });
+//}
