@@ -67,7 +67,7 @@ function installReactTools() {
 
   return new Promise((resolve, reject) => {
     const tagMatch = pkg.version.match(/-([a-z]+)\./); // '1.0.0-beta.2' => 'beta'
-    const module = tagMatch ? `react-ark-tools@${tagMatch[1]}` : 'react-ark-tools';
+    const module = tagMatch ? `react-app-tools@${tagMatch[1]}` : 'react-app-tools';
     console.log(`Installing '${module}' from npm... This may take a couple minutes.`);
 
     const npm = /^win/.test(process.platform) ? 'npm.cmd' : 'npm';
@@ -91,7 +91,7 @@ function run(command) {
 
   // eslint-disable-next-line global-require, import/no-unresolved
   return require(
-    path.resolve(process.cwd(), './node_modules/react-ark-tools/run')
+    path.resolve(process.cwd(), './node_modules/react-app-tools/run')
   )(command);
 }
 
@@ -131,7 +131,7 @@ if (command === 'new') {
       // eslint-disable-next-line global-require
       ? require(path.resolve(__dirname, '../scripts/new'))()
       // eslint-disable-next-line global-require, import/no-unresolved
-      : require(path.resolve(process.cwd(), './node_modules/react-ark-tools/scripts/new'))())
+      : require(path.resolve(process.cwd(), './node_modules/react-app-tools/scripts/new'))())
     )
     .catch(err => {
       console.error(process.argv.includes('--verbose') ? err.stack : `ERROR: ${err.message}`);

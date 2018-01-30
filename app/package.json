@@ -1,8 +1,8 @@
 {
-  "name": "react-ark",
-  "version": "1.1.4",
+  "name": "react-app",
+  "version": "1.1.2",
   "description": "Boilerplate and tooling for JavaScript application development with React",
-  "repository": "augusto-santos/react-app",
+  "repository": "kriasoft/react-app",
   "author": "Kriasoft <hello@kriasoft.com> (https://www.kriasoft.com)",
   "contributors": [
     "Konstantin Tarkus <hello@tarkus.me> (https://tarkus.me)"
@@ -34,6 +34,6 @@
     "cli.js"
   ],
   "bin": {
-    "react-ark": "./bin/react-app.js"
+    "react-app": "./bin/react-app.js"
   }
 }
